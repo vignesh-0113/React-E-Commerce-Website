@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/vignesh-0113/React-E-Commerce-Website/static/css/main.ae55c857.css",
-    "main.js": "/vignesh-0113/React-E-Commerce-Website/static/js/main.6a084f19.js",
+    "main.js": "/vignesh-0113/React-E-Commerce-Website/static/js/main.923d1a4b.js",
     "index.html": "/vignesh-0113/React-E-Commerce-Website/index.html",
     "main.ae55c857.css.map": "/vignesh-0113/React-E-Commerce-Website/static/css/main.ae55c857.css.map",
-    "main.6a084f19.js.map": "/vignesh-0113/React-E-Commerce-Website/static/js/main.6a084f19.js.map"
+    "main.923d1a4b.js.map": "/vignesh-0113/React-E-Commerce-Website/static/js/main.923d1a4b.js.map"
   },
   "entrypoints": [
     "static/css/main.ae55c857.css",
-    "static/js/main.6a084f19.js"
+    "static/js/main.923d1a4b.js"
   ]
 }
