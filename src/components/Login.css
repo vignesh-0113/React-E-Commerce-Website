@@ -1,0 +1,84 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20221222/pngtree-cyan-blue-background-mobile-4k-wallpaper-hd-victor-image_1526120.jpg');
+  background-size: cover;
+}
+
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    border: 20px;
+    
+  }
+  
+  .login-form {
+    background-color: transparent;
+    backdrop-filter: blur(80px);
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 30px;
+    padding: 30px;
+    border: 2px solid gray;
+    border-radius: 8px;
+    justify-content: space-between;
+  }
+  
+  label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    padding-top: 10px;
+  }
+  
+  input {
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 300px;
+  }
+  
+  .loginbutton {
+    background: transparent;
+    color: rgb(0, 0, 0);   
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-top: 30px;
+    background-color: gray;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  .loginbutton:hover{
+    background-color: rgb(16, 188, 194);
+  }
+
+  
+  @media all and (max-width: 700px) {
+    .login-container{
+      padding-top: 100px;
+    }
+    .login-form {
+      padding: 15px;
+      display: flex;
+      width: 300px;
+    }
+  
+    input {
+      font-size: 14px;
+      width: 270px; 
+    }
+  
+    .loginbutton {
+      font-size: 16px; 
+      padding: 10px; 
+    }
+  }
