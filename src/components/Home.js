@@ -1,18 +1,31 @@
 import React from 'react'
+import { useState , useEffect } from "react"
 import './Home.css';
 import { motion } from 'framer-motion';
-import { useNavigate, useParams } from 'react-router-dom';
+import { NavLink, useNavigate, useParams } from 'react-router-dom';
 import Carousel from 'react-bootstrap/Carousel';
-
+import { HiOutlineMailOpen } from "react-icons/hi";
+import { FaYoutube } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa6";
 
 export function Home(){
     const navigate = useNavigate();
 
+    const [products ,setProduct] = useState([]);
+    useEffect(() =>{
+        fetch('https://dummyjson.com/products')
+    .then(res => res.json())
+    .then(res  => setProduct(res.products));
+    },[]);
+
     function placeOrder() {
         setTimeout(() =>{ navigate('/products')},5000);
   }
+
+
     return (
         <>
+        <div className='homepage'>
         <header className="header">
         <motion.h1
           initial={{ y: -100, opacity: 0 }}
@@ -29,23 +42,43 @@ export function Home(){
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ duration: 0.5, delay: 1 }}>
-        <div className='wrapper'>
+        <div className='wrapper1'>
         <Carousel>
-
         <Carousel.Item>
-        <img src='https://assets.teenvogue.com/photos/5ece79ff2815b0e8f500e191/16:9/w_2560%2Cc_limit/Fenty%2520Beauty%2520Slip%2520Shine%2520Sheer%2520Shiny%2520Lipstick_Editorial(2).jpg' alt='.....'/>
+        <img alt="hero_banner" src="https://cmsimages.shoppersstop.com/skechers_Reebok_web_fed1221d66/skechers_Reebok_web_fed1221d66.png" className="md:pl-[2px]" loading="eager"/>        
         </Carousel.Item>
 
         <Carousel.Item>
-        <img src='https://img2.exportersindia.com/product_images/bc-full/dir_188/5616586/wooden-furniture-1523859255-3782082.jpg' alt='.....'/>
+        <img alt="hero_banner" src="https://cmsimages.shoppersstop.com/Giftoflove_web_9d4b071b68/Giftoflove_web_9d4b071b68.png" className="md:pl-[2px]" loading="eager"/>        </Carousel.Item>
+
+        <Carousel.Item>
+        <img alt="hero_banner" src="https://cmsimages.shoppersstop.com/Forever_New_forever_new_and_more_web_5e9046490f/Forever_New_forever_new_and_more_web_5e9046490f.png" className="md:pl-[2px]" loading="eager"/>
         </Carousel.Item>
 
         <Carousel.Item>
-        <img src='https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Samsung-Galaxy-S20-Family-CC?wid=834&hei=470&fit=crop' alt='.....'/>
+        <img alt="hero_banner" src="https://cmsimages.shoppersstop.com/Burberry_Versace_and_more_web_39980a1911/Burberry_Versace_and_more_web_39980a1911.png" className="md:pl-[2px]" loading="eager"/>
         </Carousel.Item>
 
+        <Carousel.Item>
+        <img alt="hero_banner" src="https://cmsimages.shoppersstop.com/Titan_web_6a9b90ef7c/Titan_web_6a9b90ef7c.png" className="md:pl-[2px]" loading="eager"/>
+        </Carousel.Item>
         </Carousel>
         </div>
+        <hr/>
+        <div className='wrapper2'>
+        <Carousel>
+        <Carousel.Item>
+        <img alt="hero_banner" src="https://cmsimages.shoppersstop.com/new10_sale_strip_web_a9f20f5168/new10_sale_strip_web_a9f20f5168.jpg" className="md:pl-[2px]" loading="eager" />        
+        </Carousel.Item>
+
+        <Carousel.Item>
+        <img alt="hero_banner" src="https://cmsimages.shoppersstop.com/STYLE_24_strip_web_147c1c0d9d/STYLE_24_strip_web_147c1c0d9d.jpg" className="md:pl-[2px]" loading="eager"/>
+        </Carousel.Item>
+        </Carousel>
+        </div>
+
+        <hr/>
+
         </motion.div>
         </section>
 
@@ -58,6 +91,43 @@ export function Home(){
           Shop More Products Now...
         </motion.button>
         </footer>
+        </div>
+
+        <hr/>
+        <div className='web-about'>
+              <h1>FREE WEBSITE FOR PURCHASING A PRODUCT</h1>
+              <div className='cards'>
+                <div className='wrapper'>
+                  <h3>Online Shopping</h3>
+                  <li>Men</li>
+                  <li>Women</li>
+                  <li>Kids</li>
+                  <li>Home & Living</li>
+                  <li>Beauty</li>
+                  <li>Gift</li>
+                </div>
+
+                <div className='wrapper'>
+                  <h3>Customer Policies</h3>
+                  <li>Contact Us</li>
+                  <li>FAQ</li>
+                  <li>T&C</li>
+                  <li>Terms Of Use</li>
+                  <li>Track Orders</li>
+                  <li>Shipping</li>
+                  <li>Cancellation</li>
+                  <li>Returns</li>
+                </div>
+
+                <div className='social'>
+                <h3>Keep in Touch</h3>
+                <NavLink className='media'><HiOutlineMailOpen /></NavLink>
+                <NavLink className='media'><FaYoutube /></NavLink>
+                <NavLink className='media'><FaInstagram /></NavLink>
+              </div>
+              </div>
+              
+        </div>
     </>
     )
 }

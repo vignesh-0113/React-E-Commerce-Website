@@ -73,7 +73,7 @@ span{
 }
 
 
-@media (max-width:700px){
+@media (max-width:1000px){
     .product{
         margin-top: -10px;
         display: flex;

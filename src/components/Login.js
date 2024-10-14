@@ -1,18 +1,24 @@
 import React, { useState } from 'react';
 import './Login.css'; 
 import { toast, ToastContainer } from 'react-toastify';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
 import { useAuth } from '../auth/Authenticate';
 import { motion } from 'framer-motion';
 
+
+
 export const Login = () => {
   const { user,loginUpdate } = useAuth();
- const [username , setUserName] = useState('');
- const [password, setPassword] = useState('');
+  const [username , setUserName] = useState('');
+  const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
- const navigate = useNavigate();
+  function register(){
+    toast.success('Register Page');
+    setTimeout(() =>{ navigate('/register')},5000);
+  }
 
  function onUserNameChange(e){
     setUserName(e.target.value);
@@ -39,6 +45,8 @@ export const Login = () => {
       toast.error('Login Failed',{ position : 'top-center'})
       console.error('Login failed:', error.response.data.msg);
     }
+    
+
   }; 
 
   return (
@@ -73,9 +81,11 @@ export const Login = () => {
           name="password"
           value={password}
           onChange={onPasswordChange}
-          required
-        />
+          required 
+        /> 
         <button className="loginbutton" type="submit">Login</button>
+        
+        <label>Create an account:<Link onClick={ register }> Register here</Link></label>
       </form>
       </motion.div>
     </div>

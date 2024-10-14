@@ -5,6 +5,7 @@
 }
 .head{
     text-align: center;
+    font-size: 30px;
 }
 
 .contain{
@@ -35,7 +36,7 @@
     background-color: white;
 }
 
-@media all and (max-width:700px){
+@media all and (max-width:1000px){
     .head{
         text-align: center;
     }

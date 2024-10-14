@@ -6,27 +6,39 @@
 .header{
     text-align: center;
 }
-.wrapper{
+.homepage{
+    background-color: rgb(255, 255, 255);
+}
+.wrapper1{
     margin: 40px;
     backdrop-filter: blur(50px);
-    background-color: transparent;
+    background-color: rgb(224, 228, 209);
     margin-top: 50px;
-    border-radius: 40px;
-    border: 1px solid white;
+    width: 95%;
 }
-.wrapper img{
-    width: 50%;
-    margin-left: 25%;
-    padding: 40px;
+.wrapper1 img{
+    border: 5px solid gray;
+    width: 100%;
+    height: auto;
+}
+.wrapper2{
+    margin: 40px;   
+    backdrop-filter: blur(50px);
+    background-color: rgb(224, 228, 209);
+}
+.wrapper2 img{
+    width: 100%;
+    height: auto;
     
 }
 .carousel .carousel-indicators [data-bs-target]{
     background-color: black;
 }
+span{
+    background-color: transparent;
+}
 .shopnow{
     margin-left: 40%;
-    
-    
 }
 .shop{
     padding: 10px;
@@ -36,20 +48,60 @@
     font-weight: bold;
 }
 .shop:hover{
-    background-color: white;
+    background-color: rgb(228, 73, 73);
+}
+.web-about{
+    padding: 30px;
+    background-color: rgb(175, 175, 175);
+    color: black;
+}
+.web-about h1{
+    padding: 10px;
+    text-align: center;
+    font-size: 30px;
+}
+.web-about .cards{
+    background: transparent;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.web-about .wrapper{
+    font-size: 15px;
+    align-items: flex-start;
+    width: 50vh;
+    margin: 20px;
+}
+.web-about .wrapper h3{
+    font-size: 20px;
+    font-weight: bold;
+}
+.web-about .social{
+    font-size: 40px;
+    padding: 30px;
+}
+.web-about .social h3{
+    font-size: 20px;
+    font-weight: bold;
+}
+.web-about .social .media{
+    margin: 20px;
+}
+.web-about .social .media:hover{
+    color: rgb(255, 179, 179);
 }
 
 
-
-@media all and (max-width: 700px){
+@media all and (max-width: 1000px){
+    .header{
+        padding: 10px;
+    }
     .wrapper{
         width: 80%;
-       padding-bottom: 30%;
-       padding-top: 30%;
+        padding: 10px;
     }
     .wrapper img{
         width: 100%;
-        margin: 0;
     }
     .shopnow{
         margin: 0;
@@ -63,6 +115,28 @@
         font-size: 15px;
         font-weight: bold;
     }
-    
-          
+    .web-about{
+        padding: 10px;
+        background-color: rgb(175, 175, 175);
+        color: black;
+    }
+    .web-about h1{
+        padding: 5px;
+        font-size: 15px;
+    }
+    .web-about .wrapper{
+        font-size: 15px;
+        align-items: flex-start;
+        margin: 10px;
+    }
+    .wrapper{
+        padding: 0;
+    }
+    .web-about .cards{
+        width: 200px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
 }

@@ -41,7 +41,7 @@
 }
 
 
-@media (max-width:700px){
+@media (max-width:1000px){
     .title{
         text-align: center;
         font-size: 20px;

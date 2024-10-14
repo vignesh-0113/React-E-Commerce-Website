@@ -26,12 +26,12 @@ export function Products(){
         <div className="contain">
           {products.map((product) => (
           
-          <div class="card">
+          <div className="card">
           <img src ={product.images[0]} alt = "Not found"/>
           <div className=" "id= {product.id}>
           <Link to={`/product/${product.id}`}><h2>{product.title}</h2></Link>
           </div>
-          <p class="price bg-warning">${product.price}</p>
+          <p className="price bg-warning">${product.price}</p>
           <p><b>Remaining Stocks:</b> {product.stock}</p>
             
           <button className="more">

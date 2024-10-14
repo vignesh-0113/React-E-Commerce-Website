@@ -104,11 +104,11 @@ export function Product(){
         </div>
         <div className='add'>
         <div className='addproduct'>  
-            <button onClick={() =>{ setQuantity(quantity +1)}} style={{height:'40px'}}>Quantity Increase +</button>
+            <button onClick={() =>{ setQuantity(quantity +1)}} style={{height:'40px'}}>Quantity +</button>
             <>  
             <span style={{color:quantity>0 ? 'green' : 'red', height:'40px'}}>{quantity}</span>  
             </>
-            <button onClick={()=>{ setQuantity(quantity-1)}} style={{height:'40px'}}>Quantity Decrease -</button>
+            <button onClick={()=>{ setQuantity(quantity-1)}} style={{height:'40px'}}>Quantity -</button>
         </div>
         </div>
         
