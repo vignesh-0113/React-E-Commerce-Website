@@ -36,9 +36,9 @@ export function Home(){
         </motion.h1>
         </header>
 
-        <section className="products">
+        <section className="carsoul">
         <motion.div
-          className="product"
+          className="anime"
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ duration: 0.5, delay: 1 }}>
@@ -96,6 +96,7 @@ export function Home(){
         <hr/>
         <div className='web-about'>
               <h1>FREE WEBSITE FOR PURCHASING A PRODUCT</h1>
+
               <div className='cards'>
                 <div className='wrapper'>
                   <h3>Online Shopping</h3>
@@ -118,15 +119,14 @@ export function Home(){
                   <li>Cancellation</li>
                   <li>Returns</li>
                 </div>
-
-                <div className='social'>
+              </div>
+              <div className='social'>
                 <h3>Keep in Touch</h3>
                 <NavLink className='media'><HiOutlineMailOpen /></NavLink>
                 <NavLink className='media'><FaYoutube /></NavLink>
                 <NavLink className='media'><FaInstagram /></NavLink>
               </div>
-              </div>
-              
+                           
         </div>
     </>
     )

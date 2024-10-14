@@ -10,7 +10,7 @@
     background-color: rgb(255, 255, 255);
 }
 .wrapper1{
-    margin: 40px;
+    margin: 25px;
     backdrop-filter: blur(50px);
     background-color: rgb(224, 228, 209);
     margin-top: 50px;
@@ -22,7 +22,7 @@
     height: auto;
 }
 .wrapper2{
-    margin: 40px;   
+    margin: 25px;   
     backdrop-filter: blur(50px);
     background-color: rgb(224, 228, 209);
 }
@@ -96,12 +96,18 @@ span{
     .header{
         padding: 10px;
     }
-    .wrapper{
+    .wrapper1{
         width: 80%;
         padding: 10px;
     }
-    .wrapper img{
+    .wrapper1 img{
         width: 100%;
+        height: 22vh;
+        padding: 10px;
+    }
+    .wrapper2 img{
+        width: 100%;
+        height: 8vh;
     }
     .shopnow{
         margin: 0;
@@ -119,6 +125,7 @@ span{
         padding: 10px;
         background-color: rgb(175, 175, 175);
         color: black;
+        
     }
     .web-about h1{
         padding: 5px;
@@ -128,15 +135,21 @@ span{
         font-size: 15px;
         align-items: flex-start;
         margin: 10px;
-    }
-    .wrapper{
         padding: 0;
+        
     }
+    
     .web-about .cards{
-        width: 200px;
+        margin-left: 30%;
+        width: 50%;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+              
+    }
+    .social{
+        width: 100%;
+        text-align: center;
     }
 
 }
