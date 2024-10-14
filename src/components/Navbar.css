@@ -87,13 +87,16 @@ button{
     .navbar {
         font-size: 5px;
         padding: 10px;
-        
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: nowrap;
     }
     
     .nav-btn{
         visibility: visible;
         opacity: 1;
-        padding-right: 15px;
+        margin-left: -30px;
     }
     .navlink{
         position: fixed;

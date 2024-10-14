@@ -55,9 +55,7 @@ input {
 }
 
 @media all and (max-width: 1000px) {
-    .register-container{
-      padding-top: 100px;
-    }
+   
     .reg-form {
       padding: 15px;
       display: flex;

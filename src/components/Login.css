@@ -58,9 +58,7 @@ input {
 
   
 @media all and (max-width: 1000px) {
-  .login-container{
-    padding-top: 100px;
-  }
+  
   .login-form {
     padding: 15px;
     display: flex;
