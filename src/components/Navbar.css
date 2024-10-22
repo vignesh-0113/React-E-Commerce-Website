@@ -92,7 +92,10 @@ button{
         justify-content: space-between;
         flex-wrap: nowrap;
     }
-    
+    .navbar h2{
+        margin-left: -10px;
+        font-size: 18px;
+    }
     .nav-btn{
         visibility: visible;
         opacity: 1;
